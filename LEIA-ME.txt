@@ -1,4 +1,4 @@
-SITE NOSSA HISTÓRIA
+SITE NOSSA HISTÓRIA PREMIUM
 
 Arquivos principais:
 index.html
@@ -6,17 +6,30 @@ style.css
 script.js
 
 Fotos:
-Coloque as fotos em assets/fotos.
-
-Galeria:
-Use os nomes foto1.jpg, foto2.jpg, foto3.jpg...
-Depois confira a lista no script.js.
+assets/fotos/foto1.jpg
+assets/fotos/foto2.jpg
+assets/fotos/foto3.jpg
 
 Foto em coração:
-Coloque a foto em assets/fotos/nos-coracao.jpg.
+assets/fotos/nos-coracao.jpg
+
+Foto de fundo da abertura:
+assets/fotos/foto-capa.jpg
 
 Música:
-Coloque o MP3 em assets/musicas/nossa-musica.mp3.
+assets/musicas/nossa-musica.mp3
+
+O que foi adicionado:
+- Mini player dentro da página.
+- Botão "Iniciar nossa história".
+- Bloco "Tudo começou em".
+- Galeria aleatória sem repetir até mostrar todas.
+- Contador da galeria.
+- Mensagem surpresa no final da carta.
+- Rodapé personalizado.
+- Suporte a foto de fundo na abertura.
 
 Publicação:
-Suba tudo para o repositório do GitHub Pages.
+Envie todos os arquivos para o GitHub.
+Se já existir o site, use Add file > Upload files e envie tudo novamente.
+Confirme o commit.
