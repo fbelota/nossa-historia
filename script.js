@@ -41,7 +41,40 @@ function criarCoracao() {
 }
 setInterval(criarCoracao, 700);
 
-// Galeria randômica.
+// Mini player: mantém a posição da música se a página for recarregada.
+const audioPlayer = document.getElementById('audioPlayer');
+const playHistoria = document.getElementById('playHistoria');
+
+if (audioPlayer) {
+  const tempoSalvo = localStorage.getItem('tempoNossaMusica');
+
+  audioPlayer.addEventListener('loadedmetadata', () => {
+    if (tempoSalvo && !Number.isNaN(Number(tempoSalvo))) {
+      audioPlayer.currentTime = Number(tempoSalvo);
+    }
+  });
+
+  audioPlayer.addEventListener('timeupdate', () => {
+    localStorage.setItem('tempoNossaMusica', audioPlayer.currentTime);
+  });
+}
+
+if (playHistoria && audioPlayer) {
+  playHistoria.addEventListener('click', async () => {
+    try {
+      await audioPlayer.play();
+    } catch (error) {
+      console.log('O navegador bloqueou o play automático.');
+    }
+
+    const historia = document.getElementById('historia');
+    if (historia) {
+      historia.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
+
+// Galeria randômica sem repetição.
 // Coloque suas fotos em assets/fotos e adicione os nomes abaixo.
 const fotos = [
   'assets/fotos/foto1.jpg',
@@ -59,24 +92,49 @@ const fotos = [
 ];
 
 const galeria = document.getElementById('galeriaRandomica');
+const contadorGaleria = document.getElementById('contadorGaleria');
 const modalFoto = document.getElementById('modalFoto');
 const fotoAmpliada = document.getElementById('fotoAmpliada');
 const fecharModal = document.getElementById('fecharModal');
+
+let filaFotos = [];
+let exibidas = 0;
 
 function embaralharFotos(lista) {
   return [...lista].sort(() => Math.random() - 0.5);
 }
 
+function renovarFila() {
+  filaFotos = embaralharFotos(fotos);
+}
+
+function proximasFotos(quantidade = 3) {
+  if (filaFotos.length < quantidade) {
+    renovarFila();
+  }
+
+  const selecionadas = filaFotos.splice(0, quantidade);
+  exibidas += selecionadas.length;
+
+  if (exibidas > fotos.length) {
+    exibidas = selecionadas.length;
+  }
+
+  return selecionadas;
+}
+
 function mostrarFotosRandomicas() {
   if (!galeria) return;
 
-  const selecionadas = embaralharFotos(fotos).slice(0, 3);
+  const selecionadas = proximasFotos(3);
   galeria.innerHTML = '';
 
   selecionadas.forEach((foto) => {
     const img = document.createElement('img');
     img.src = foto;
     img.alt = 'Foto do casal';
+    img.loading = 'lazy';
+
     img.onerror = function () {
       this.src = 'assets/placeholder.svg';
       this.style.cursor = 'default';
@@ -86,13 +144,19 @@ function mostrarFotosRandomicas() {
       if (img.src.includes('placeholder.svg')) return;
       fotoAmpliada.src = foto;
       modalFoto.classList.add('ativo');
+      modalFoto.setAttribute('aria-hidden', 'false');
     });
 
     galeria.appendChild(img);
   });
+
+  if (contadorGaleria) {
+    contadorGaleria.textContent = `Fotos ${Math.min(exibidas, fotos.length)} de ${fotos.length}`;
+  }
 }
 
 if (galeria) {
+  renovarFila();
   mostrarFotosRandomicas();
   setInterval(mostrarFotosRandomicas, 5000);
 }
@@ -100,6 +164,7 @@ if (galeria) {
 if (fecharModal) {
   fecharModal.addEventListener('click', () => {
     modalFoto.classList.remove('ativo');
+    modalFoto.setAttribute('aria-hidden', 'true');
   });
 }
 
@@ -107,6 +172,7 @@ if (modalFoto) {
   modalFoto.addEventListener('click', (event) => {
     if (event.target === modalFoto) {
       modalFoto.classList.remove('ativo');
+      modalFoto.setAttribute('aria-hidden', 'true');
     }
   });
 }
@@ -114,23 +180,19 @@ if (modalFoto) {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && modalFoto) {
     modalFoto.classList.remove('ativo');
+    modalFoto.setAttribute('aria-hidden', 'true');
   }
 });
 
+// Mensagem surpresa final.
+const abrirSurpresa = document.getElementById('abrirSurpresa');
+const mensagemSurpresa = document.getElementById('mensagemSurpresa');
 
-// Mini player: mantém a posição da música se a página for recarregada.
-const audioPlayer = document.getElementById('audioPlayer');
-
-if (audioPlayer) {
-  const tempoSalvo = localStorage.getItem('tempoNossaMusica');
-
-  audioPlayer.addEventListener('loadedmetadata', () => {
-    if (tempoSalvo && !Number.isNaN(Number(tempoSalvo))) {
-      audioPlayer.currentTime = Number(tempoSalvo);
-    }
-  });
-
-  audioPlayer.addEventListener('timeupdate', () => {
-    localStorage.setItem('tempoNossaMusica', audioPlayer.currentTime);
+if (abrirSurpresa && mensagemSurpresa) {
+  abrirSurpresa.addEventListener('click', () => {
+    mensagemSurpresa.classList.toggle('ativo');
+    const estaAberta = mensagemSurpresa.classList.contains('ativo');
+    mensagemSurpresa.setAttribute('aria-hidden', String(!estaAberta));
+    abrirSurpresa.textContent = estaAberta ? 'Guardar mensagem' : 'Clique aqui';
   });
 }

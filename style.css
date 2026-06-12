@@ -430,13 +430,35 @@ footer {
 }
 
 
-/* Mini player da música */
+
+/* Ajustes premium */
+.hero {
+  position: relative;
+  background:
+    linear-gradient(rgba(17, 6, 12, 0.64), rgba(17, 6, 12, 0.82)),
+    url("assets/fotos/foto-capa.jpg") center/cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.hero-card {
+  position: relative;
+  z-index: 1;
+}
+
+.time-machine h2 {
+  color: var(--accent2);
+}
+
 .player-card {
   flex-direction: column;
   align-items: stretch;
-}
-
-.music-info {
   text-align: center;
 }
 
@@ -453,10 +475,67 @@ footer {
   line-height: 1.5;
 }
 
+.play-main {
+  border: 0;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto 16px;
+}
+
 .player-card audio {
   width: 100%;
   max-width: 560px;
   margin: 0 auto;
   display: block;
   accent-color: var(--accent);
+}
+
+.gallery-counter {
+  color: var(--muted);
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.surprise-btn {
+  border: 0;
+  cursor: pointer;
+  display: block;
+  margin: 24px auto 0;
+}
+
+.surprise-message {
+  display: none;
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255, 47, 109, 0.12);
+  border: 1px solid rgba(255, 139, 176, 0.35);
+  text-align: center;
+}
+
+.surprise-message.ativo {
+  display: block;
+  animation: aparecer 0.35s ease;
+}
+
+.surprise-message p {
+  text-align: center;
+  text-indent: 0;
+  margin-bottom: 10px;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    background-position: center;
+  }
+
+  .play-main {
+    width: 100%;
+  }
 }

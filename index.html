@@ -25,6 +25,13 @@
   </header>
 
   <main>
+    <section class="section time-machine">
+      <p class="tag">Tudo começou em...</p>
+      <h2>19 de fevereiro de 2019</h2>
+      <p class="section-text">às 14:00</p>
+      <p class="section-text">E desde então, o tempo virou testemunha da nossa história.</p>
+    </section>
+
     <section class="section counter-section">
       <h2>Nosso tempo juntos</h2>
       <p class="section-text">Desde o dia em que nossa história começou.</p>
@@ -37,15 +44,17 @@
       </div>
     </section>
 
-    <section class="section music-section">
+    <section class="section music-section" id="musica">
       <h2>Nossa música</h2>
       <p class="section-text">Aquela que sempre vai lembrar nós dois.</p>
 
       <div class="music-card player-card">
         <div class="music-info">
           <p class="music-title">Tenho Sorte · João Gomes</p>
-          <p class="music-subtitle">Dê o play para ouvir enquanto lê nossa história.</p>
+          <p class="music-subtitle">🎵 Nossa música está pronta para tocar.</p>
         </div>
+
+        <button class="btn play-main" id="playHistoria" type="button">▶ Iniciar nossa história</button>
 
         <audio id="audioPlayer" controls preload="metadata">
           <source src="assets/musicas/nossa-musica.mp3" type="audio/mpeg">
@@ -99,6 +108,7 @@ Eles imaginam os dias guiados pelo sol e pela brisa do mar, as paixões que mais
       <h2>Nossos registros</h2>
       <p class="section-text">Alguns dos momentos que guardamos no coração.</p>
       <div class="gallery" id="galeriaRandomica"></div>
+      <p class="gallery-counter" id="contadorGaleria">Carregando fotos...</p>
 
       <div class="modal-foto" id="modalFoto" aria-hidden="true">
         <span class="fechar-modal" id="fecharModal" aria-label="Fechar foto ampliada">&times;</span>
@@ -124,12 +134,22 @@ Feliz nosso dia 04. Te amo infinitamente.</p>
         <p>Obrigado por caminhar comigo, por dividir a vida, por estar nos dias leves e nos dias difíceis. Você é parte do melhor que existe em mim.</p>
         <p>Eu te amo. Hoje, amanhã e em todos os capítulos que ainda vamos escrever.</p>
         <p class="signature">Com amor, Fred</p>
+
+        <button class="btn surprise-btn" id="abrirSurpresa" type="button">Clique aqui</button>
+
+        <div class="surprise-message" id="mensagemSurpresa" aria-hidden="true">
+          <p>❤️</p>
+          <p>Obrigado por escolher caminhar ao meu lado.</p>
+          <p>Se eu pudesse voltar no tempo, escolheria você novamente.</p>
+          <p>Em todas as vidas.</p>
+          <p>❤️</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    Feito com amor ❤️
+    Criado especialmente para Ana Karla. 04 de abril de 2026 ❤️
   </footer>
 
   <script src="script.js"></script>
