@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa História</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <header class="hero">
+    <div class="hero-card">
+      <p class="tag">Ainda tem mais...</p>
+      <div class="couple-title" aria-label="Fred e Karla">
+        <span class="nome">Fred</span>
+        <div class="heart-image">
+          <img src="assets/fotos/nos-coracao.jpg" alt="Foto de Fred e Karla" onerror="this.parentElement.classList.add('sem-foto')" />
+        </div>
+        <span class="nome">Karla</span>
+      </div>
+      <p class="subtitle">Uma página para guardar tudo que a gente viveu, tudo que somos e tudo que ainda vamos construir.</p>
+      <a href="#historia" class="btn">Descobrir</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section counter-section">
+      <h2>Nosso tempo juntos</h2>
+      <p class="section-text">Desde o dia em que nossa história começou.</p>
+      <div class="counter" id="contador">
+        <div><strong id="anos">0</strong><span>anos</span></div>
+        <div><strong id="meses">0</strong><span>meses</span></div>
+        <div><strong id="dias">0</strong><span>dias</span></div>
+        <div><strong id="horas">0</strong><span>horas</span></div>
+        <div><strong id="minutos">0</strong><span>min</span></div>
+      </div>
+    </section>
+
+    <section class="section music-section">
+      <h2>Nossa música</h2>
+      <p class="section-text">Aquela que sempre vai lembrar nós dois.</p>
+
+      <div class="music-card player-card">
+        <div class="music-info">
+          <p class="music-title">Tenho Sorte · João Gomes</p>
+          <p class="music-subtitle">Dê o play para ouvir enquanto lê nossa história.</p>
+        </div>
+
+        <audio id="audioPlayer" controls preload="metadata">
+          <source src="assets/musicas/nossa-musica.mp3" type="audio/mpeg">
+          Seu navegador não suporta áudio.
+        </audio>
+      </div>
+    </section>
+
+    <section class="section" id="historia">
+      <h2>Nossa mini série - O Amor que Esperou: A Nossa História</h2>
+      <div class="timeline">
+        <article>
+          <span>Capítulo 1</span>
+          <h3>O Encontro no Arraial (O Primeiro Olhar)</h3>
+          <p>A história começa há pouco mais de vinte e três anos, em uma Manaus nostálgica, no meio da alegria vibrante de um arraial no C.S.U. Entre o barulho, as barracas e as risadas, o destino operou o seu primeiro movimento. Fred viu Ana Karla chegando com um sorriso que parecia iluminar o ambiente. Quando os olhares se cruzaram, algo mudou. Foi uma conexão instantânea, daquelas que arrepiam a pele e dispensam qualquer explicação lógica. Naquele momento, no meio da festa, nascia silenciosamente uma linda história que levaria mais de duas décadas para ser totalmente escrita.
+
+A vivência deles naquele momento foi curta, porém de uma intensidade avassaladora. Mas a vida, com seus caminhos imprevisíveis e curvas tortuosas, acabou por puxar cada um para um rumo diferente. O tempo passou, e ambos tiveram que se refazer. Construíram outras rotinas, criaram novos laços, viveram em outras casas. Mas, no fundo, o coração de nenhum dos dois largou aquela lembrança. Eles seguiram por estradas separadas, mas o amor, invisível e persistente, nunca se soltou por completo.</p>
+        </article>
+        <article>
+          <span>Capítulo 2</span>
+          <h3>O Reencontro e o Bar da Árvore (O Resgate do Passado)</h3>
+          <p>Os anos se transformaram em décadas. Parecia que o livro havia sido fechado, até que o calendário marcou o final do ano de 2018. Através de uma mensagem despretensiosa e cheia de receios, o silêncio de anos foi quebrado. Houve medo de como entrar na vida do outro novamente, mas o sentimento guardado era forte demais para recuar.
+
+As conversas voltaram a ser longas, o riso fluiu fácil, como se o tempo nunca tivesse passado. O reencontro físico aconteceu no Bar da Árvore. Ali, sentados entre lembranças e olhares agora mais maduros, o passado veio buscá-los. Tudo o que estava adormecido despertou com ainda mais força. Ana Karla se mostrava uma mulher madura, intensa, inteligente, agitada e com uma resiliência admirável, cuidando de tudo ao seu redor. Fred, que trazia consigo as suas próprias marcas e inseguranças, encontrou nela um porto seguro. Ela o ensinou a confiar de novo, e ele aprendeu a ficar, a amar sem medo e com a certeza de que estava exatamente onde deveria estar.</p>
+        </article>
+        <article>
+          <span>Capítulo 3</span>
+          <h3>O Lar e a Confirmação (Sete Anos de Cumplicidade)</h3>
+          <p>Não demorou para que a urgência de viver esse amor os fizesse tomar a decisão mais importante de suas vidas. No dia 4 de abril de 2019, eles decidiram juntar os seus caminhos sob o mesmo teto. Ali, começava a verdadeira construção diária da cumplicidade e da parceria. Foram anos de convivência real, somando os planos, os sonhos, apoiando-se mutuamente nos momentos de estudo e nos desafios da vida, enfrentando juntos os julgamentos e as opiniões alheias. Nada foi capaz de abalar o nó que haviam atado.
+
+Após seis anos de vida compartilhada, no dia 4 de abril de 2025, eles decidiram que era hora de confirmar para o mundo o que as suas almas já sabiam há muito tempo. Diante da família, dos amigos e sob a bênção de Deus, eles disseram o "Sim" oficial no altar, celebrando o casamento e consagrando de vez aquela união.</p>
+        </article>
+        <article>
+          <span>Capítulo 4</span>
+          <h3>O Dia 4 de Abril e a Vida Compartilhada (A Eternidade no Cotidiano)</h3>
+          <p>Hoje, ao olhar para trás, a linha do tempo se desenha com perfeição: são 23 anos desde aquele primeiro olhar no C.S.U., 7 anos de uma parceria inabalável construindo o mesmo lar e 1 ano da celebração do casamento oficial. Mas a verdadeira beleza dessa união se revela nas experiências e nos momentos inesquecíveis que têm curtido juntos. Foram viagens marcantes, descobertas e vivências que enriqueceram a bagagem do casal e criaram memórias eternas.
+
+Contudo, o que realmente os fortalece é a percepção diária do quanto fazem bem um ao outro. Esse amor não depende apenas de grandes cenários ou de roteiros turísticos; ele brilha intensamente na simplicidade do cotidiano. Mesmo em dias comuns, em meio à correria do trabalho e dos compromissos, ambos se pegam contando os minutos para retornar ao lar. Estar em casa, juntos, é o melhor destino de todos. Se alguém perguntar a origem de tudo isso, a resposta será simples e cheia de fé: foi Deus quem guardou esse amor. Um amor que soube esperar vinte e três anos na gaveta do tempo para, finalmente, voltar para casa e se tornar eterno.</p>
+        </article>
+        <article>
+          <span>Capítulo 5</span>
+          <h3>O Nosso Futuro (O Pé na Estrada e o Sal no Corpo)</h3>
+          <p>Se o passado foi de espera e o presente é de pura confirmação, o futuro os aguarda com a mesma intensidade e alegria. O plano é cristalino: alcançar a aposentadoria com muita saúde, vitalidade e disposição para desbravar o mundo juntos.
+
+Eles imaginam os dias guiados pelo sol e pela brisa do mar, as paixões que mais os movem. Num primeiro momento, o roteiro é explorar cada canto do Brasil, afundando os pés na areia e colecionando pores do sol pelo litoral nordestino, passando pelas praias de Porto Seguro, Salvador, Recife, e descobrindo novos refúgios. Depois, o mundo inteiro será pequeno para a vontade de viajar que compartilham. Talvez a vida ganhe a estrada a bordo de um motorhome, rodando sem pressa, sem destino fixo e com a liberdade de acordar em um lugar diferente a cada dia. Mas de uma coisa eles têm certeza absoluta: não importa a praia, o país ou o veículo, eles estarão sempre lado a lado, em profunda cumplicidade, amando-se infinitamente mais a cada novo amanhecer.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <h2>Nossos registros</h2>
+      <p class="section-text">Alguns dos momentos que guardamos no coração.</p>
+      <div class="gallery" id="galeriaRandomica"></div>
+
+      <div class="modal-foto" id="modalFoto" aria-hidden="true">
+        <span class="fechar-modal" id="fecharModal" aria-label="Fechar foto ampliada">&times;</span>
+        <img id="fotoAmpliada" src="" alt="Foto ampliada" />
+      </div>
+    </section>
+
+    <section class="section letter-section">
+      <h2>Uma carta para você</h2>
+      <div class="letter">
+        <p>Minha vida,</p>
+        <p>Se você chegou até aqui, já percorreu as páginas da nossa própria história. Criei este site não apenas como uma surpresa, mas como um refúgio nosso. Um espaço intocável onde o tempo, que soube esperar pacientemente desde aquele primeiro olhar no C.S.U., pudesse ser eternizado.
+
+Cada capítulo que você leu reflete a admiração profunda que tenho por nós. Eu precisava registrar para o mundo — e para nós mesmos — a força do nosso reencontro, a solidez dos nossos 7 anos construindo o mesmo lar e a emoção inesquecível do nosso "Sim" oficial no dia 4 de abril.
+
+Mais do que uma linha do tempo, este espaço é uma celebração da nossa parceria diária. É sobre as viagens que colecionamos e sobre aquela ansiedade gostosa que sinto todos os dias, contando os minutos para abrir a porta de casa e encontrar você. É sobre a cumplicidade que fortalece os nossos passos e a certeza absoluta de que somos o porto seguro um do outro.
+
+Você, com toda a sua intensidade, inteligência e resiliência, me ensinou a amar sem medo. Construir a vida ao seu lado, somando sonhos e certezas, é a minha maior realização.
+
+Este site é inteiramente dedicado a você. Que ele seja um lembrete constante de tudo o que superamos e, principalmente, do futuro incrível que nos aguarda. Não importa a praia do Nordeste que vamos pisar, ou a estrada que nosso motorhome vai percorrer: a minha melhor jornada sempre será com você.
+
+Feliz nosso dia 04. Te amo infinitamente.</p>
+        <p>Obrigado por caminhar comigo, por dividir a vida, por estar nos dias leves e nos dias difíceis. Você é parte do melhor que existe em mim.</p>
+        <p>Eu te amo. Hoje, amanhã e em todos os capítulos que ainda vamos escrever.</p>
+        <p class="signature">Com amor, Fred</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Feito com amor ❤️
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

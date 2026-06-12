@@ -1,0 +1,22 @@
+SITE NOSSA HISTÓRIA
+
+Arquivos principais:
+index.html
+style.css
+script.js
+
+Fotos:
+Coloque as fotos em assets/fotos.
+
+Galeria:
+Use os nomes foto1.jpg, foto2.jpg, foto3.jpg...
+Depois confira a lista no script.js.
+
+Foto em coração:
+Coloque a foto em assets/fotos/nos-coracao.jpg.
+
+Música:
+Coloque o MP3 em assets/musicas/nossa-musica.mp3.
+
+Publicação:
+Suba tudo para o repositório do GitHub Pages.
