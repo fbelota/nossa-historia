@@ -164,11 +164,6 @@ function mostrarFotosRandomicas() {
     galeria.appendChild(img);
   });
 
-  if (contadorGaleria) {
-    contadorGaleria.textContent = `Fotos ${Math.min(exibidas, fotos.length)} de ${fotos.length}`;
-  }
-}
-
 if (galeria) {
   renovarFila();
   mostrarFotosRandomicas();
