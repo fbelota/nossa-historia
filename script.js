@@ -88,9 +88,23 @@ const fotos = [
   'assets/fotos/foto9.jpg',
   'assets/fotos/foto10.jpg',
   'assets/fotos/foto11.jpg',
-  'assets/fotos/foto12.jpg'
+  'assets/fotos/foto12.jpg',
+  'assets/fotos/foto13.jpg',
+  'assets/fotos/foto14.jpg',
+  'assets/fotos/foto15.jpg',
+  'assets/fotos/foto16.jpg',
+  'assets/fotos/foto17.jpg',
+  'assets/fotos/foto18.jpg',
+  'assets/fotos/foto19.jpg',
+  'assets/fotos/foto20.jpg',
+  'assets/fotos/foto21.jpg',
+  'assets/fotos/foto22.jpg',
+  'assets/fotos/foto23.jpg',
+  'assets/fotos/foto24.jpg',
+  'assets/fotos/foto25.jpg',
+  'assets/fotos/foto26.jpg'
 ];
-
+  
 const galeria = document.getElementById('galeriaRandomica');
 const contadorGaleria = document.getElementById('contadorGaleria');
 const modalFoto = document.getElementById('modalFoto');
